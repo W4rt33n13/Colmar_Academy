@@ -1,0 +1,471 @@
+body, html {
+  font-size: 16px;
+  width: 100%;
+  margin: auto;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+body {
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica Black";
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0b56e3;
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.img-cont{
+  display: flex;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.img-cont img{
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+.img-cont img.mobile{
+  display: none;
+}
+
+.vid-cont {
+  display: inline-block;
+}
+
+.vid-cont video {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.bg-primary {
+  background-color: #9E1B32;
+}
+
+.bg-secondary {
+  background-color: #828A8F;
+}
+.txt-primary {
+  color: white;
+}
+/* Header section */
+header {
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  height: 4rem;
+  padding: 0 1.5rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+}
+
+.logo img {
+  height: 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav span {
+  padding: 0.5rem 0.5rem;
+  color: black;
+  border-radius: 5px;
+}
+
+nav.mobile  {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+
+  header .logo {
+    display: none;
+    padding: 0;
+  }
+
+  nav.mobile  {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  nav.desktop {
+    display: none;
+  }
+
+  nav span img {
+    height: 1.75rem;
+  }
+
+  nav span:first-child img {
+    height: 2rem;
+  }
+}
+
+/* Banner section */
+.banner .img-cont {
+  flex: 3;
+}
+
+.banner .content {
+  flex: 2;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+
+.banner h1 {
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  margin: 0.75rem 0;
+  width: 70%;
+}
+
+.banner .button {
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.banner .button:hover, nav span:hover {
+  background-color: #0277bf;
+  transition: 300ms 100ms;
+  cursor: pointer;
+}
+
+.banner .button:active, nav span:active {
+  background-color: #bf9a02;
+  transition: 200ms;
+}
+
+@media only screen and (max-width: 650px) {
+
+  .banner .img-cont {
+    display: none;
+  }
+
+  .banner .content {
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .banner .button {
+    max-width: 275px;
+  }
+}
+
+/* Info Section */
+.info {
+  align-items: flex-start;
+}
+
+.prac {
+  flex: 3;
+  flex-direction: column;
+}
+
+.prac .msg {
+  margin: 0 1.5rem 2rem 1.5rem;
+}
+
+.prac .msg span {
+  display: block;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.prac h2 {
+  margin-top: 0;
+}
+
+.lnks {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.lnk {
+  display: flex;
+}
+
+.lnk:hover, .pane:hover, .thesis:hover {
+  background-color: rgba(24,44,92, .2);
+  transition: 300ms 100ms;
+  cursor: pointer;
+}
+
+.lnk:active, .pane:active, .thesis:active {
+  background-color: rgba(191, 154, 2, .2);
+  transition: 200ms;
+}
+
+.lnk .img-cont {
+  flex: 1;
+  padding: 1rem;
+}
+
+.lnk .content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.lnk .content span {
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .lnk .img-cont img.mobile {
+    display: block;
+  }
+
+  .lnk .img-cont img.desktop, .prac {
+    display: none;
+  }
+
+  .lnks {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .lnk {
+    width: 100%;
+  }
+
+  .lnks .lnk:last-child {
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .img-cont img.mobile {
+    display: block;
+  }
+
+  .img-cont img.desktop, .prac{
+    display: none;
+  }
+
+  .lnks {
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .lnk {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .lnk:first-child {
+    margin-top: 1rem;
+  }
+
+  .lnk .img-cont {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  .lnk .content {
+    margin: 0 1rem;
+  }
+
+  .lnks .lnk:last-child {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Learning section */
+.tile-sect {
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.tile-sect h1 {
+  margin: 0 0 1rem 0;
+}
+
+.panes {
+  flex-flow: row nowrap;
+  /*max-width: 1080px;*/
+  width: 90%;
+  justify-content: center;
+}
+
+.pane {
+  width: 20rem;
+  background-color: white;
+  margin: 1rem;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.pane .img-cont {
+  padding: 0
+}
+
+.pane .msg {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1rem;
+  flex-direction: column;
+  margin: 0.5rem 1rem 1.5rem 1rem;
+  height: 7rem;
+}
+
+.pane .msg {
+  margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .pane .msg p {
+    display: none;
+  }
+
+  .pane .msg {
+    height: 3.5rem;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+
+  .tile-sect {
+    padding: 2rem 0;
+    margin 0;
+  }
+
+  .panes {
+    flex-direction: column;
+  }
+
+  .pane {
+    max-width: 20rem;
+    height: auto;
+    margin: 0.25rem 0.5rem;
+    width: calc(100% - 1rem);
+    background-color: rgba(24,44,92, 0.4);
+  }
+
+  .pane .msg {
+    margin: 0.5rem 1rem;
+    height: auto;
+  }
+
+  .pane .img-cont, .pane p {
+    display: none;
+  }
+}
+
+/* Thesis section */
+.thesis-sect {
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.cols {
+  margin: 0 1.5rem;
+  align-items: flex-start;
+}
+
+.left-col, .right-col {
+  flex-direction: column;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.left-col h3 {
+  margin: 1.5rem 0;
+}
+
+.right-col {
+  width: 26.5rem;
+}
+
+.thesis {
+  display: flex;
+  align-items: center;
+  height: 10.5rem;
+  width: 26.5rem;
+  padding: 1rem 0;
+}
+
+.thesis .img-cont {
+  height: 9.75rem;
+  width: 9.75rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.thesis .msg {
+  flex: 2;
+}
+
+@media only screen and (max-width: 900px) {
+  .right-col, .left-col .msg {
+    display: none;
+  }
+}
+
+/* footer section */
+footer {
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid rgb(184, 198, 207);
+  height: 5rem;
+}
+
+footer span {
+  color: black;
+}
+
+@media only screen and (max-width: 500px) {
+  footer nav {
+    display: none;
+  }
+}
